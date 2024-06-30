@@ -65,3 +65,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # laravel-api
+
+## Steps to install the project ?
+1. `git clone git@github.com:Mow69/laravel-api.git`
+2. `cd laravel-api/`
+3. `composer install && npm -i`
+4. `php artisan sail:install`
+5. `./vendor/bin/sail up -d`
+6. `sail artisan storage:link`
+7. `sail artisan migrate`
