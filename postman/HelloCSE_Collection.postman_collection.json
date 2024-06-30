@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "bfd5bbeb-5510-40fa-a8e8-eff80c7f3a17",
+		"name": "HelloCSE_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8969158"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin / Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost/api/logout",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin / display all profil list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/api/profils",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"profils"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin / Get a profil",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{beared_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/api/profils/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"profils",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin / Create a profil",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Paul",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Dupuis",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "///wsl.localhost/Ubuntu/home/mouaz/projets/hellocse-test/storage/app/public/images/profils/be8a98dceea4bc7d3a8ccc904e2fa42b.png"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/api/profils",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"profils"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin / Update a profil",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Jean",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Pottier",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "///wsl.localhost/Ubuntu/home/mouaz/projets/hellocse-test/storage/app/public/images/profils/5e3b3b6af2ab2ece025f59e4df022ac6.png"
+								},
+								{
+									"key": "status",
+									"value": "inactive",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/api/profils/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"profils",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|xy5IXb0YPEDPl0DBA46k612HePZ73AtYSq0cxgmM40d8b010",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "$12$ThTizJ9r5xRKoB2yasXm4.BOPwzG4fzhGJDk0eFl/2JMq/Vs3aw42",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/login",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@example.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Display all active profil list",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/profils",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"profils"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a profil",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/profils/1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"profils",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "beared_token",
+			"value": "1|xy5IXb0YPEDPl0DBA46k612HePZ73AtYSq0cxgmM40d8b010"
+		}
+	]
+}
